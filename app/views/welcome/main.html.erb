@@ -1,0 +1,48 @@
+<div id = "last_articles">
+	<% @articles.each do |article| %>
+		<div class = "article">
+			<div class = "article_content">
+				<h3><%= link_to article.name, article_path(article) %></h3>
+				<p><%= truncate_article(article) %></p>
+							<div class = "timestamp"> 
+				Posted <%= time_ago_in_words(article.created_at) %> ago 
+			</div>
+			</div>
+
+		</div>	
+	<% end %>
+</div>
+
+	<script>
+    (function($){
+        $(window).load(function(){
+            $("#last_articles").mCustomScrollbar();
+        });
+    })(jQuery);
+</script>
+
+<div class = "css3-logo">
+<h2 class="cs-text">
+	<span class="cs-text-cut">
+		<span class="word1">White</span>
+	</span>
+
+	<span class="cs-text-mid">	<%= link_to "enter shop", products_path %></span>
+	<span class="cs-text-cut">
+		<span class="word1">Stack</span>
+	</span>
+</h2>
+</div>
+<div id = "latest_comments">
+
+<%= render 'latest_comments' %>
+</div>
+
+	<script>
+
+            setInterval(function(){
+  $.get("/latest_comments.js")
+}, 5000);	
+
+</script>
+

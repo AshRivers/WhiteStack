@@ -1,0 +1,144 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery.mCustomScrollbar
+ *= require_tree .
+ */
+
+html, body {
+	height: 95%;
+	background-image: url('back.jpg');
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: orange;
+	text-decoration: none;
+	/*background-color: white;*/
+}
+
+#sidebar {
+	font-family: 'Molot';
+	font-size: 1.3em;
+	letter-spacing: 0.1em;
+	word-spacing: 1.5em;
+}
+
+.container {
+	width: 80%;
+	/*padding: 20px;*/
+	margin-left:auto;
+	margin-right:auto;
+	/*background-color: red;*/
+	height: 80%;
+	color: white;
+	position: relative;
+	/*top:10px;*/
+	/*bottom: 10px;*/
+}
+
+header {
+	background-color: black;
+	height: 90px;
+}
+
+#header_nav {
+	float: right;
+}
+
+#header_nav ul li {
+	margin: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+
+}
+
+#header_nav ul {
+	margin: 5px;
+	margin-left: 15px;
+	/*clear: both;*/
+}
+
+#header_nav ul li a:hover {
+	color: grey;
+}
+#login {
+	border-bottom: solid;	
+	font-size: 20px;
+}
+#login a:hover {
+	
+}
+
+#header_nav a {
+	color: white;
+}
+
+nav {
+	background-image: url('transparent.png');
+	float: left;
+	width: 12%;
+	padding: 2% 0 2% 2%;
+	display: block;
+}
+
+nav ul {
+	clear: both;
+	padding: 0;
+	list-style: none;
+}
+
+.main {
+	height: 100%;
+}
+
+.content {
+	margin-left: 15%;
+	background-image: url('transparent.png');
+	margin-top: 10px;
+	padding: 2%;
+	height: 100%;
+}
+
+/*
+.product_info {
+	display: block;
+}*/
+ul {
+	list-style: none;
+}
+
+
+#user_header_image {
+	margin-top: 20px;
+	/*padding-right: 200px;*/
+	/*display: inline;*/
+	float: left;
+	/*margin-right: 50px;*/
+}
+
+#user_cart {
+	float: left;
+	margin-top: 20px;
+	/*padding: 10px;*/
+}
+
+#list {
+	float: right;
+	/*margin-left: 10px;*/
+}
+
+#list_with_image {
+		float: right;
+	margin-left: 10px;
+}

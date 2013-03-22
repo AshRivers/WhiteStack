@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div id = "article">
+  <div id = "a_name"><h2><%= @article.name %></h2>
+  <% if current_user.try(:admin?) %>
+  <%= link_to 'Edit', edit_article_path(@article) %>
+  <% end %></div>
+  <p><%= @article.post %></p>
+  <div class = "timestamp"> 
+          Posted <%= time_ago_in_words(@article.created_at) %> ago 
+        </div>
+</div>
+

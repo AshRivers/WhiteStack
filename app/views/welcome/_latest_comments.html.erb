@@ -1,0 +1,37 @@
+
+<div id = "lat_com">
+    <ul id="comments">	
+    <%= link_to latest_comments_path, remote: true do %>
+        <i class = "icon-reload"></i>
+    <% end %>
+    Latest Comments:</div>
+  		<% @comments.each do |comment| %>
+    	<li>
+    		<span class = "comment_header">
+    			About <%= link_to comment.commentable_type.singularize.classify.constantize.find(comment.commentable_id).name, 
+    				product_path(comment.commentable_type.singularize.classify.constantize.find(comment.commentable_id)),class: "article_link" %>:
+    		</span>
+    			
+    		<span class = "comment_content">	
+    		    		<%= comment.content %>
+    		</span>
+    		<div class = "timestamp"> 
+    			Posted <%= time_ago_in_words(comment.created_at) %> ago 
+    			by <%= link_to comment.user.name, comment.user %>
+    		</div>
+    	</li>
+  		<% end %>
+	</ul>
+
+    <script>
+            
+        
+            // if ($("#latest_comments .mCustomScrollbar")) {
+                
+            // } 
+            // else {
+            //     $("#latest_comments").mCustomScrollbar();
+            // }
+
+
+    </script>

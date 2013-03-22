@@ -1,0 +1,26 @@
+<h1>Listing pictures</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pictures.each do |picture| %>
+  <tr>
+    <td><%= image_tag picture.image.url(:picture_small) %></td>
+    <td><%= link_to 'Show', picture %></td>
+    <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
+    <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% if params[:product_id] %>
+      <%= button_to "Set as sn Image", picture_assotiations_path(product_id: params[:product_id], image_id: picture.id) %>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Picture', new_picture_path %>

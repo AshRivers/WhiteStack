@@ -1,0 +1,18 @@
+<h1>Listing orders</h1>
+
+<% @orders.each do |order| %>
+	<% if order.user_id %>
+    	<%= link_to order.name, User.find(order.user_id) %>
+    <% end %>
+    <%= order.address %>
+    <%= order.cell_phone %>
+    <%= order.additional_info %>
+    <% order.cart_items.each do |item| %>
+        <%= Product.find(item.product_id).name %>
+    <% end %>
+    <%= link_to 'View Details', order %>
+    <%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
+
+<br />
+

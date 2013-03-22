@@ -1,0 +1,46 @@
+.article_link {
+	font-size: 1.2em;
+}
+#lat_com {
+	font-family: 'Molot';
+	margin-bottom: 5%;
+	font-size: 18px;
+}
+li {
+	list-style: none;
+}
+#comments {
+	padding: 2%;
+	/*float: right;*/
+}
+ li {
+	clear: both;
+	/*margin-top: 10%;*/
+	/*border-top: 1px solid;*/
+}
+ li .timestamp {
+	clear: both;
+	margin-right: 10%;
+	margin-bottom: 6%;
+	/*border-bottom: 1px solid;*/
+	/*margin-left: 20%;*/
+}
+
+#latest_comments {
+	float: right;
+	width: 40%;
+	overflow: auto;
+	max-height: 50%;
+}
+
+.comment_header {
+	display: block;
+	margin-left: 5%;
+
+}
+.comment_content {
+	display: block;
+	margin: 2%;
+	/*font-size: 1.1em;*/
+	font-weight: bold;
+}

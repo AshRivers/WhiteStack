@@ -1,0 +1,21 @@
+# /app/views/comments/index.html.erb
+
+<h1>Comments</h1>
+
+<ul id="comments">
+  <% @comments.each do |comment| %>
+    <li><%= link_to comment.content, product_comment_path(@commentable,comment) %></li>
+  <% end %>
+</ul>
+
+<h2>New Comment</h2>
+<%= form_for [@commentable, Comment.new] do |f| %>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :rows => 5 %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Add comment" %>
+  </div>
+<% end %>
+

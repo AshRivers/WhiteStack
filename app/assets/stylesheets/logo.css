@@ -1,0 +1,16 @@
+#logo {
+	font-family: verdana,sans-serif;
+	color: white;
+	font-family: 'Molot';
+	letter-spacing: 0.1em;
+	font-size: 50px;
+	font-weight: bold;
+	word-spacing: 4pt;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: auto;
+	margin-left: 40px;
+	 text-shadow: 5px 5px 1px  rgba(150, 150, 150, 0.35);/*#B3B3B3;*/
+	/*filter: dropshadow(color=#c2c2c2, offx=5, offy=5);*/
+
+}

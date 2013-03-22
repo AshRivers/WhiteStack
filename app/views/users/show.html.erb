@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= image_tag @user.picture.url(:big_thumb) if @user.picture? %>
+</p>
+
+<p>
+  <b>Adress:</b>
+  <%= @user.adress %>
+</p>
+
+<p>
+  <b>Additional info:</b>
+  <%= @user.additional_info %>
+</p>
+
+<% if current_user == @user %>
+<%= link_to 'Edit', edit_user_path(@user) %>
+<% end %>

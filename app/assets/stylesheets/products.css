@@ -1,0 +1,30 @@
+#products {
+	display: inline-block;
+	width: 100%;
+}
+
+.product_item {
+	float: left;
+	margin: 20px;
+	width: 220px;
+	/*height: 200px;*/
+}
+
+.short_info {
+	display: inline;
+	float: left;
+	margin-right: 20px;
+	/*font-size: 500px;*/
+}
+
+.short_info_and_button {
+	float: left;
+	width: 220px;
+	margin-top: 13px;
+	margin-bottom: 10px;
+	/*display: inline;*/
+}
+.short_info_and_button button {
+	display: inline;
+	float: right;
+}
